@@ -3,90 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <script defer src="assets/js/script.js"></script>
-    <title>Frontend Mentor | Contact form</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/form-submit.js"></script>
   </head>
   <body>
-    <div id="toast" class="toast hidden" role="status" aria-live="polite">
-      <div class="toast-content">
-        <div class="toast-icon">✔</div>
-        <div>
-          <p class="toast-title">Message Sent!</p>
-          <p class="toast-text">
-            Thanks for completing the form. We'll be in touch soon!
-          </p>
-        </div>
-      </div>
-    </div>
-    <main class="main">
-      <section class="card">
-        <h1>Contact Us</h1>
-        <form id="contactForm" class="form" novalidate>
-          <div class="row">
-            <div>
-              <label for="firstName">First Name *</label>
-              <input id="firstName" name="firstName" type="text" />
-              <p id="firstNameError" class="error"></p>
+    <main class="page">
+      <section class="contact-card" aria-labelledby="contact-title">
+        <h1 id="contact-title">Contact Us</h1>
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="firstName">First Name <span>*</span></label>
+              <input id="firstName" name="firstName" type="text" required />
+              <small class="error">This field is required</small>
             </div>
-            <div>
-              <label for="lastName">Last Name *</label>
-              <input id="lastName" name="lastName" type="text" />
-              <p id="lastNameError" class="error"></p>
+            <div class="field">
+              <label for="lastName">Last Name <span>*</span></label>
+              <input id="lastName" name="lastName" type="text" required />
+              <small class="error">This field is required</small>
             </div>
           </div>
-          <div>
-            <label for="email">Email Address *</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="email@example.com"
-            />
-            <p id="emailError" class="error"></p>
+          <div class="field">
+            <label for="email">Email Address <span>*</span></label>
+            <input id="email" name="email" type="email" required />
+            <small class="error">Please enter a valid email address</small>
           </div>
-          <fieldset class="fieldset">
-            <legend>Query Type *</legend>
-            <label class="radio">
-              <input type="radio" name="queryType" value="general" />
-              General Enquiry
-            </label>
-            <label class="radio">
-              <input type="radio" name="queryType" value="support" />
-              Support Request
-            </label>
-            <p id="queryTypeError" class="error"></p>
-          </fieldset>
-          <div>
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-            <p id="messageError" class="error"></p>
+          <section class="field query">
+            <legend>Query Type <span>*</span></legend>
+            <div class="query-options">
+              <label class="radio">
+                <input type="radio" name="queryType" value="general" required />
+                <span>General Enquiry</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="queryType" value="support" required />
+                <span>Support Request</span>
+              </label>
+            </div>
+            <small class="error">Please select a query type</small>
+          </section>
+          <div class="field">
+            <label for="message">Message <span>*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <small class="error">This field is required</small>
           </div>
-          <label class="checkbox">
-            <input id="consent" name="consent" type="checkbox" />
-            I consent to being contacted by the team *
-          </label>
-          <p id="consentError" class="error"></p>
-          <button type="submit">Submit</button>
+          <div class="field consent">
+            <label class="checkbox">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span
+                >I consent to being contacted by the team <span>*</span></span
+              >
+            </label>
+            <small class="error"
+              >To submit this form, please consent to being contacted</small
+            >
+          </div>
+          <button type="submit" class="btn">Submit</button>
         </form>
       </section>
+      <div
+        id="success-toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+        aria-hidden="true"
+      >
+        <div class="success-toast-title">
+          <span class="success-toast-icon"
+            ><img
+              src="./assets/images/icon-success-check.svg"
+              alt="success-icon"
+          /></span>
+          <strong>Message Sent!</strong>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
     </main>
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/p3lm3shka1" target="_blank"
+        >P3lm3shka1</a
+      >.
+    </footer>
   </body>
 </html>
