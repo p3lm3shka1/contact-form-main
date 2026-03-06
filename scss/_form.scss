@@ -26,7 +26,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  margin-bottom: $space-1;
+  margin: $space-1;
 
   input,
   textarea {
@@ -168,3 +168,4 @@
     color: $grey-500;
   }
 }
+
