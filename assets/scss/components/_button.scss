@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+button {
+  background: $green-600;
+  color: $white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: $fw-700;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($green-600, 5%);
+  }
+}

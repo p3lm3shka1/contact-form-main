@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script defer src="assets/js/script.js"></script>
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div id="toast" class="toast hidden" role="status" aria-live="polite">
+      <div class="toast-content">
+        <div class="toast-icon">✔</div>
+        <div>
+          <p class="toast-title">Message Sent!</p>
+          <p class="toast-text">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="card">
+        <h1>Contact Us</h1>
+        <form id="contactForm" class="form" novalidate>
+          <div class="row">
+            <div>
+              <label for="firstName">First Name *</label>
+              <input id="firstName" name="firstName" type="text" />
+              <p id="firstNameError" class="error"></p>
+            </div>
+            <div>
+              <label for="lastName">Last Name *</label>
+              <input id="lastName" name="lastName" type="text" />
+              <p id="lastNameError" class="error"></p>
+            </div>
+          </div>
+          <div>
+            <label for="email">Email Address *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="email@example.com"
+            />
+            <p id="emailError" class="error"></p>
+          </div>
+          <fieldset class="fieldset">
+            <legend>Query Type *</legend>
+            <label class="radio">
+              <input type="radio" name="queryType" value="general" />
+              General Enquiry
+            </label>
+            <label class="radio">
+              <input type="radio" name="queryType" value="support" />
+              Support Request
+            </label>
+            <p id="queryTypeError" class="error"></p>
+          </fieldset>
+          <div>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <p id="messageError" class="error"></p>
+          </div>
+          <label class="checkbox">
+            <input id="consent" name="consent" type="checkbox" />
+            I consent to being contacted by the team *
+          </label>
+          <p id="consentError" class="error"></p>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

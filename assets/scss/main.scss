@@ -1,0 +1,19 @@
+@use "abstracts/variables" as *;
+
+@use "base/reset" as *;
+@use "base/typography" as *;
+
+@use "layout/grid" as *;
+
+@use "components/card" as *;
+@use "components/form" as *;
+@use "components/button" as *;
+@use "components/toast" as *;
+
+.main {
+  min-height: $vh-full;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $space-3;
+}

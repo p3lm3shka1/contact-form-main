@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+input,
+textarea {
+  width: $w-full;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid $grey-500;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: $green-600;
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15);
+  }
+}
+
+.fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: $w-full;
+  gap: $space-2;
+}
+
+.radio {
+  display: block;
+  border: 1px solid $grey-500;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: $space-1;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.error {
+  color: $red;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.border-rose-600 {
+  border-color: $red !important;
+}
+
+.border-slate-300 {
+  border-color: $grey-500 !important;
+}
+
+.focus\:border-rose-600:focus {
+  border-color: $red !important;
+}
+
+.focus\:ring-rose-600\/15:focus {
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.15);
+}
+
+.radio.border-rose-600 {
+  border-color: $red;
+}
+
+.input--error {
+  border: 1px solid red;
+}
+
+.input--ok {
+  border: 1px solid #ccc;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.radio--error {
+  border: 1px solid red;
+}
+
+.toast--show {
+  display: block;
+  opacity: 1;
+}
