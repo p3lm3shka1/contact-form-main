@@ -1,0 +1,18 @@
+@use "variables" as *;
+
+.attribution {
+  text-align: center;
+  color: $green-600;
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: $grey-900;
+    text-decoration: none;
+    font-weight: $fw-600;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+}

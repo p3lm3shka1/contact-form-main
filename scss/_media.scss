@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .query .query-options {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: $space-2;
+  }
+}

@@ -1,0 +1,31 @@
+@use "variables" as *;
+
+@font-face {
+  font-family: "Karla", sans-serif;
+  src: url(../assets/fonts/Karla-VariableFont_wght.ttf) format("truetype");
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: $grey-900;
+  background: $green-200;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: $space-2;
+  font-weight: $fw-700;
+}
+
+label,
+legend {
+  font-size: 14px;
+  font-weight: $fw-500;
+}
+
+small.error {
+  display: none;
+  color: $red;
+  font-size: 12px;
+  margin-top: $space-1;
+}

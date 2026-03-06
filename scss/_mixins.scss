@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+//toast mixin
+
+@mixin toast {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background: $grey-900;
+  color: $white;
+  padding: $space-2;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  width: min(370px, 90%);
+  z-index: 10;
+}
+
+//button mixin
+
+@mixin button {
+  width: 100%;
+  background: $green-600;
+  color: $white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: $fw-600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
